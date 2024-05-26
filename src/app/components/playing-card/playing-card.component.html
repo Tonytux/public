@@ -1,0 +1,32 @@
+<div id="card">
+	<div id="inside"[style.background-color]="backgroundColor()" >
+		<header>
+			<div class="left">
+				<div id="name">{{player().name}}</div>
+			</div>
+			<div class="right">
+				<div id="age">{{player().age}} ans</div>
+				<img class="energy icon" [src]="playerTypeIcon()" />
+			</div>
+		</header>
+		<figure id="art">
+			<img id="image" [src]="player().image"/>
+			<figcaption>{{player().figureCaption}}</figcaption>
+		</figure>
+		<div id="capacities">
+			<div class="capacity">
+				<div class="main">
+					<div class="cost">
+						<img class="icon energy" [src]="playerTypeIcon()" />
+					</div>
+					<div class="name">{{player().name}}</div>
+					<div class="damage">{{player().figureCaption}}</div>
+				</div>
+				<div class="description">
+                    {{player().attackDescription}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

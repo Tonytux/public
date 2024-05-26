@@ -1,0 +1,14 @@
+<div style="display: flex; align-items: center; justify-content: center;">
+    <app-search-bar [(search)] = "search"></app-search-bar>
+</div>
+<div id="card-list">
+    @for (player of filteredPlayers(); track player) {
+        <app-playing-card [player]="player"/>
+    } @empty {
+        <div class="center">Pas de joueur(s)</div>
+    }
+</div>
+
+@if (filteredPlayers().length > 0) {
+    <div class="center">Trouvé {{filteredPlayers().length}} joueur(s)</div>
+}
